@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Résultats loto{% endblock %}
+
+{% block body %}
+
+{{ form_start(form) }}
+
+    <div class="p-4">
+        <div class="form-group">
+            <div class="col">
+                <div class="row mb-2">
+                    <label for="import_file">{{ form_label(form.attachment) }}</label>
+                </div>
+                <div class="row mb-2">
+                    {{ form_widget(form.attachment) }}
+                </div>
+                    <button type="submit" class="btn btn-primary">Importer</button>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+
+    {{ form_rest(form) }}
+{{ form_end(form) }}
+
+{% endblock %}

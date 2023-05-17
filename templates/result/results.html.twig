@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Résultats loto{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        {% for result in results %}
+        <div class="col-3">
+            <div class="row">
+                <h1>{{result.day}}</h1>
+            </div>
+            <div class="row">
+                <p>Boule tirées : {{result.ball_1}},{{result.ball_2}},{{result.ball_3}},{{result.ball_4}},{{result.ball_5}}</p>
+            </div>
+            <div class="row">
+                <p>Nombre chance : {{result.lucky_number}} </p>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+
+{% endblock %}
